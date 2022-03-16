@@ -1,5 +1,5 @@
 [binaries]
-c = 'arm-zephyr-eabi-gcc'
+c = [ 'arm-zephyr-eabi-gcc', '-nostdlib', '-fno-common' ]
 ar = 'arm-zephyr-eabi-ar'
 as = 'arm-zephyr-eabi-as'
 nm = 'arm-zephyr-eabi-nm'
@@ -13,6 +13,5 @@ cpu = 'arm'
 endian = 'little'
 
 [properties]
-c_args = [ '-nostdlib', '-fno-common' ]
 needs_exe_wrapper = true
 skip_sanity_check = true

@@ -1,5 +1,5 @@
 [binaries]
-c = 'riscv64-unknown-elf-gcc'
+c = ['riscv64-unknown-elf-gcc', '-nostdlib', '-msave-restore', '-fno-common' ]
 ar = 'riscv64-unknown-elf-ar'
 as = 'riscv64-unknown-elf-as'
 strip = 'riscv64-unknown-elf-strip'
@@ -13,7 +13,6 @@ cpu = 'riscv'
 endian = 'little'
 
 [properties]
-c_args = [ '-nostdlib', '-msave-restore', '-fno-common' ]
 # default multilib is 64 bit
 c_args_ = [ '-mcmodel=medany' ]
 needs_exe_wrapper = true

@@ -1,5 +1,5 @@
 [binaries]
-c = 'aarch64-linux-gnu-gcc'
+c = ['aarch64-linux-gnu-gcc', '-mpc-relative-literal-loads', '-nostdlib', '-fno-pic', '-static']
 ar = 'aarch64-linux-gnu-ar'
 as = 'aarch64-linux-gnu-as'
 ld = 'aarch64-linux-gnu-ld'
@@ -14,7 +14,6 @@ cpu = 'aarch64'
 endian = 'little'
 
 [properties]
-c_args = ['-mpc-relative-literal-loads', '-nostdlib', '-fno-pic', '-static']
 needs_exe_wrapper = true
 skip_sanity_check = true
 link_spec = '--build-id=none'
